@@ -1,0 +1,384 @@
+{
+  "hero": {
+    "src": "https://images.unsplash.com/photo-1534214526114-0ea5d5707da0?q=80&w=2070&auto=format&fit=crop",
+    "alt": "Misty mountain valley at dawn",
+    "data-ai-hint": "misty mountain"
+  },
+  "canvas": {
+    "src": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop",
+    "alt": "A serene lake with a wooden dock and mountains in the background, representing a beautiful travel plan.",
+    "data-ai-hint": "serene lake"
+  },
+  "story1": {
+    "src": "https://images.unsplash.com/photo-1677253152912-15f5174c12c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdXJmJTIwc2Nob29sJTIwaW4lMjB2YXJrYWxhfGVufDB8fHx8MTc1ODEwNDE0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "alt": "A person surfing on a wave.",
+    "data-ai-hint": "person surfing"
+  },
+  "story2": {
+    "src": "https://images.unsplash.com/photo-1633891407037-486cbfe0fc2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8ZGVsaGklMjBzdHJlZXRzfGVufDB8fHx8MTc1ODEwNDMxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "alt": "A close-up shot of various Indian street food dishes.",
+    "data-ai-hint": "indian food"
+  },
+  "story3": {
+    "src": "https://images.unsplash.com/photo-1695954590938-ec7aa19efd5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxN3x8bW9uYXN0ZXJ5JTIwaW4lMjBoaW1hbGF5YXN8ZW58MHx8fHwxNzU4MTA0NjE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "alt": "A peaceful monastery in the Himalayan mountains.",
+    "data-ai-hint": "himalayan monastery"
+  },
+  "planner": {
+    "src": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop",
+    "alt": "Scenic lake with mountains",
+    "data-ai-hint": "scenic mountains lake"
+  },
+  "teamMember1": {
+    "src": "https://picsum.photos/seed/teammate1/400/400",
+    "alt": "Placeholder image for team member 1",
+    "data-ai-hint": "person smiling"
+  },
+  "teamMember2": {
+    "src": "https://picsum.photos/seed/teammate2/400/400",
+    "alt": "Placeholder image for team member 2",
+    "data-ai-hint": "person working"
+  },
+  "teamMember3": {
+    "src": "https://picsum.photos/seed/teammate3/400/400",
+    "alt": "Placeholder image for team member 3",
+    "data-ai-hint": "person portrait"
+  },
+  "teamMember4": {
+    "src": "https://picsum.photos/seed/teammate4/400/400",
+    "alt": "Placeholder image for team member 4",
+    "data-ai-hint": "person technology"
+  },
+  "teamMember5": {
+    "src": "https://picsum.photos/seed/teammate5/400/400",
+    "alt": "Placeholder image for team member 5",
+    "data-ai-hint": "person design"
+  },
+  "map": {
+    "src": "https://cdn.discordapp.com/attachments/727107979412897795/1428051215476064346/simple-background-black-background-minimalism-digital-art_955080-4898.jpg?ex=68f117d5&is=68efc655&hm=02a5ec668b010fda564c38b0f0ed214d8e736d4f32672ba285f6a43c475a94d5&",
+    "alt": "Placeholder image for team member 3",
+    "data-ai-hint": "person portrait"
+  },
+  "waterfall": {
+    "src": "https://images.unsplash.com/photo-1547702521-a473b6fa620f?q=80&w=2070&auto=format&fit=crop",
+    "alt": "A majestic waterfall cascading down mossy cliffs into a serene pool of water.",
+    "data-ai-hint": "majestic waterfall"
+  },
+  "loginBackground": {
+    "src": "https://plus.unsplash.com/premium_photo-1697729434815-40ab4970ebc1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    "alt": "A red sports car on a scenic road during sunset, representing a luxury travel experience.",
+    "data-ai-hint": "ferrari road"
+  },
+  "paris": {
+    "name": "Paris, France",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "alt": "The Eiffel Tower in Paris",
+      "data-ai-hint": "eiffel tower"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1570939274717-7eda259b50ed?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "alt": "Effiel Tower",
+        "data-ai-hint": "louvre museum"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1587648415693-4a5362b2ce41?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+        "alt": "Louvre Museum",
+        "data-ai-hint": "notre-dame cathedral"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1656357175323-151769785f25?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "alt": "Notre-Dame Cathedral",
+        "data-ai-hint": "seine river"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Eiffel Tower",
+        "description": "Iconic wrought-iron lattice tower on the Champ de Mars."
+      },
+      {
+        "name": "Louvre Museum",
+        "description": "The world's largest art museum and a historic monument."
+      },
+      {
+        "name": "Notre-Dame Cathedral",
+        "description": "A medieval Catholic cathedral, widely considered to be one of the finest examples of French Gothic architecture."
+      }
+    ]
+  },
+  "kyoto": {
+    "name": "Kyoto, Japan",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "alt": "A traditional street in Kyoto at night",
+      "data-ai-hint": "kyoto street"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1558862107-d49ef2a04d72?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "alt": "Fushimi Inari Shrine with red torii gates",
+        "data-ai-hint": "fushimi inari"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1612890877778-f7d9703c6023?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1228",
+        "alt": "Arashiyama Bamboo Grove",
+        "data-ai-hint": "bamboo grove"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1705579687385-7c9c2a1961b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1244",
+        "alt": "A serene temple in Kyoto",
+        "data-ai-hint": "kyoto temple"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Fushimi Inari Shrine",
+        "description": "Famous for its thousands of vibrant orange torii gates."
+      },
+      {
+        "name": "Arashiyama Bamboo Grove",
+        "description": "A magical, walking path through a dense bamboo forest."
+      },
+      {
+        "name": "Kinkaku-ji",
+        "description": "A stunning Zen Buddhist temple completely covered in gold leaf."
+      }
+    ]
+  },
+  "bali": {
+    "name": "Bali, Indonesia",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1938&auto=format&fit=crop",
+      "alt": "A beautiful beach in Bali",
+      "data-ai-hint": "bali beach"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1652451160926-6d0f2bb16cfe?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "alt": "Ubud Monkey Forest",
+        "data-ai-hint": "monkey forest"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1553902000-e036b7d05af5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "alt": "Tanah Lot Temple",
+        "data-ai-hint": "lot temple"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1559628233-100c798642d4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735",
+        "alt": "Tegallalang Rice Terraces",
+        "data-ai-hint": "rice terraces"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Ubud Monkey Forest",
+        "description": "A sanctuary and natural habitat of the Balinese long-tailed macaque."
+      },
+      {
+        "name": "Tanah Lot Temple",
+        "description": "A spectacular sea temple perched on a rock formation in the ocean."
+      },
+      {
+        "name": "Tegallalang Rice Terraces",
+        "description": "Famous for its beautiful scenes of rice paddies and their innovative irrigation system."
+      }
+    ]
+  },
+  "rome": {
+    "name": "Rome, Italy",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1626285220266-e35bd313d05b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735",
+      "alt": "The Colosseum in Rome",
+      "data-ai-hint": "rome colosseum"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop",
+        "alt": "The Colosseum",
+        "data-ai-hint": "the Colosseum"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1663875661698-fd1efd89bf0b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+        "alt": "Trevi Fountain",
+        "data-ai-hint": "trevi fountain"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1176",
+        "alt": "Vatican City",
+        "data-ai-hint": "vatican City"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "The Colosseum",
+        "description": "An oval amphitheatre in the centre of the city, the largest ever built."
+      },
+      {
+        "name": "Trevi Fountain",
+        "description": "An 18th-century fountain in the Trevi district, designed by Italian architect Nicola Salvi."
+      },
+      {
+        "name": "Vatican City",
+        "description": "A city-state surrounded by Rome, Italy, the headquarters of the Roman Catholic Church."
+      }
+    ]
+  },
+  "newYork": {
+    "name": "New York, USA",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=2074&auto=format&fit=crop",
+      "alt": "The skyline of New York City",
+      "data-ai-hint": "new york"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1588384153148-ebd739ac430c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=736",
+        "alt": "Statue of Liberty",
+        "data-ai-hint": "statue liberty"
+      },
+      {
+        "src": "https://plus.unsplash.com/premium_photo-1697729862026-8f486fcd7f8b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1247",
+        "alt": "Central Park",
+        "data-ai-hint": "central park"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1503179008861-d1e2b41f8bec?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
+        "alt": "Times Square",
+        "data-ai-hint": "times square"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Statue of Liberty",
+        "description": "A colossal neoclassical sculpture on Liberty Island."
+      },
+      {
+        "name": "Central Park",
+        "description": "An urban park in Manhattan, it is the most visited urban park in the United States."
+      },
+      {
+        "name": "Times Square",
+        "description": "A major commercial intersection, tourist destination, entertainment center, and neighborhood."
+      }
+    ]
+  },
+  "london": {
+    "name": "London, UK",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=2070&auto=format&fit=crop",
+      "alt": "The Tower Bridge in London",
+      "data-ai-hint": "london bridge"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1543832923-44667a44c804?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1044",
+        "alt": "Tower Bridge",
+        "data-ai-hint": "tower bridge"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1739110494853-59d8a93b732c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1172",
+        "alt": "The London Eye",
+        "data-ai-hint": "london eye"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1470215883992-c49406afc34f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+        "alt": "The British Museum",
+        "data-ai-hint": "british museum"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Tower Bridge",
+        "description": "A combined bascule and suspension bridge in London, built between 1886 and 1894."
+      },
+      {
+        "name": "The London Eye",
+        "description": "A cantilevered observation wheel on the South Bank of the River Thames."
+      },
+      {
+        "name": "The British Museum",
+        "description": "A public institution dedicated to human history, art and culture."
+      }
+    ]
+  },
+  "sydney": {
+    "name": "Sydney, Australia",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1524293581917-878a6d017c71?q=80&w=2070&auto=format&fit=crop",
+      "alt": "The Sydney Opera House",
+      "data-ai-hint": "sydney opera"
+    },
+    "gallery": [
+      {
+        "src": "https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1132",
+        "alt": "Sydney Opera House",
+        "data-ai-hint": "opera house"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1524562865630-b991c6c2f261?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764",
+        "alt": "Sydney Harbour Bridge",
+        "data-ai-hint": "harbour bridge"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1551980424-665454563867?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "alt": "Bondi Beach",
+        "data-ai-hint": "bondi beach"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Sydney Opera House",
+        "description": "A multi-venue performing arts centre at Sydney Harbour."
+      },
+      {
+        "name": "Sydney Harbour Bridge",
+        "description": "A steel through arch bridge across Sydney Harbour."
+      },
+      {
+        "name": "Bondi Beach",
+        "description": "A popular beach and the name of the surrounding suburb in Sydney."
+      }
+    ]
+  },
+  "dubai": {
+    "name": "Dubai, UAE",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop",
+      "alt": "The Burj Khalifa in Dubai",
+      "data-ai-hint": "dubai skyline"
+    },
+    "gallery": [
+      {
+        "src": "https://plus.unsplash.com/premium_photo-1694475634077-e6e4b623b574?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1971",
+        "alt": "Burj Khalifa",
+        "data-ai-hint": "burj khalifa"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1584027013621-40ec4871bc30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "alt": "The Dubai Mall",
+        "data-ai-hint": "dubai mall"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1682410601904-24ec1d9858e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
+        "alt": "Palm Jumeirah",
+        "data-ai-hint": "palm jumeirah"
+      }
+    ],
+    "popularSpots": [
+      {
+        "name": "Burj Khalifa",
+        "description": "The world's tallest building, a global icon."
+      },
+      {
+        "name": "The Dubai Mall",
+        "description": "The second largest shopping mall in the world by total land area."
+      },
+      {
+        "name": "Palm Jumeirah",
+        "description": "An archipelago of artificial islands on the Persian Gulf."
+      }
+    ]
+  }
+}

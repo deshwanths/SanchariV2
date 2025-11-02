@@ -1,0 +1,46 @@
+
+# Sanchari: Feature Breakdown
+
+## Core Features
+
+- **Multi-Step Itinerary Planner**: A guided, step-by-step form that collects all necessary user preferences to generate a personalized trip. The flow is managed using React Hook Form with validation provided by Zod.
+- **Destination & Starting Location Input**: Users can input their trip destination and starting point via text fields enhanced with Google Places Autocomplete for accurate location suggestions.
+- **Date Range Selection**: A calendar-based date picker allows users to select the start and end dates for their trip, which is used to determine the itinerary's duration.
+- **Travel Style & Vibe Selection**: Users can define their trip's character by choosing a travel style (e.g., Budget, Comfortable, Luxury) and selecting from a list of interests and moods (e.g., Heritage, Adventure, Relaxation).
+- **User Authentication**: Standard email/password authentication is implemented using Firebase Authentication, allowing users to sign up, log in, and maintain a profile. A demo login is also available for quick access.
+- **Itinerary Saving and History**: Logged-in users can save their generated itineraries. A newly created itinerary is automatically saved to Firestore under a user-specific collection (`/users/{userId}/itineraries`). The profile page displays a list of all saved trips.
+- **Itinerary Management**: From their profile, users can view, edit the title of, or permanently delete their saved itineraries. All operations are secured by Firestore rules to ensure data ownership.
+
+## AI Features
+
+- **Personalized Itinerary Generation**: The core AI feature uses Genkit and the Gemini 2.5 Flash model to process user inputs from the planner form and generate a complete, day-by-day travel itinerary. The prompt is structured to return a valid JSON object conforming to a predefined Zod schema.
+- **Multi-Modal Prompting (Image to Itinerary)**: Users can upload an image as inspiration. A Genkit flow uses a vision-capable model to analyze the image's content and generate a thematically consistent itinerary, which can then be customized in subsequent steps.
+- **Real-time Itinerary Adjustments**: An existing itinerary can be modified based on real-time inputs like weather conditions or transportation delays. A dedicated Genkit flow takes the current itinerary and the new constraints, regenerating an adjusted plan.
+- **Structured JSON Output**: All AI generation prompts are designed to output a structured JSON object. This is enforced by providing a Zod schema in the `output` definition of the Genkit prompt, ensuring reliable and type-safe data handling on the frontend.
+- **Post-Processing of AI Data**: The Genkit flows include a manual post-processing step to aggregate all unique locations from the daily activities into a single top-level `locations` array. This simplifies rendering the map on the frontend.
+
+## UI Features
+
+- **Interactive Itinerary Display**: The generated itinerary is displayed in a two-column layout, with daily plans organized in an accordion on one side and an interactive map on the other.
+- **Interactive Map with Markers**: Utilizes the Google Maps JavaScript API to display all itinerary locations as numbered markers. Clicking a marker reveals an InfoWindow with details and a link to Google Maps for directions.
+- **Dynamic & Animated UI**: The application features a modern, clean aesthetic with animations for a fluid user experience. This includes Framer Motion for step transitions in the planner, GSAP for the interactive dot grid on the homepage, and custom components like `RotatingText` and `ScrambleText` for dynamic effects.
+- **Planner with Progress Indicator**: The multi-step planner form uses smooth `framer-motion` transitions between questions and displays a progress bar to show the user how far along they are in the process.
+- **Profile Dashboard**: The user profile page presents saved itineraries in a card-based grid, with options to view, edit, or delete each trip. It also supports lazy loading more itineraries as the user scrolls.
+- **Theming and Dark Mode**: The application supports both light and dark themes, which can be toggled by the user. The theme is managed using `next-themes` and CSS variables for easy customization.
+- **Responsive Design**: All components and layouts are designed to be fully responsive, ensuring a seamless experience across devices from mobile phones to desktops.
+
+## Backend Enhancements
+
+- **Secure Firestore Rules**: Firestore security rules are configured to enforce data ownership, ensuring that users can only read or write to their own subcollections (e.g., `/users/{userId}/**`). A global deny-all rule prevents unauthorized access to other parts of the database.
+- **API Integration (Google Maps)**: Integrates with the Google Places API for autocomplete suggestions in location input fields and the Google Maps JavaScript API for displaying the interactive map.
+- **Centralized Firebase Setup**: Firebase is initialized and provided throughout the application using a React Context Provider (`FirebaseProvider`), which also exposes hooks like `useUser` and `useAuth` for easy access to authentication state and instances.
+- **Contextual Error Handling**: A custom error handling system (`FirestorePermissionError`, `errorEmitter`) is in place to surface rich, contextual Firestore permission errors directly in the Next.js development overlay, simplifying the debugging of security rules.
+- **Optimized Itinerary Queries**: The profile page uses paginated queries (orderBy, limit, startAfter) to fetch saved itineraries, ensuring efficient data loading and better performance as the number of saved trips grows.
+
+## Bonus or Future Features
+
+- **Trip Sharing & Collaboration**: Allow users to generate a unique, shareable link for their itinerary. Future versions could enable real-time collaborative editing for group trips.
+- **Expense Tracking**: Integrate a simple expense logger within the itinerary, allowing users to track their spending against the AI's estimated budget.
+- **Itinerary Variants**: After generating an itinerary, offer one-click options to create alternative versions like 'More Relaxed,' 'More Adventurous,' or 'Kid-Friendly.'
+- **Offline Caching**: Use service workers to cache saved itineraries, allowing users to access their plans on the go without an internet connection.
+- **Advanced User Profiles**: Allow users to save default travel preferences (style, interests) to their profile so they don't have to re-enter them for every new trip.

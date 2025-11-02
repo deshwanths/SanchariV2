@@ -1,0 +1,196 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 220 20% 97%; /* #F8FAFC */
+    --foreground: 222 29% 18%; /* #1E293B */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 222 29% 18%; /* #1E293B */
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 222 29% 18%; /* #1E293B */
+    --primary: 217 91% 60%; /* #3B82F6 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 93% 68%; /* #60A5FA */
+    --secondary-foreground: 222 29% 18%; /* #1E293B */
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 93% 68%; /* Using Secondary as Accent */
+    --accent-foreground: 222 29% 18%;
+    --destructive: 0 81% 63%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 210 93% 68%;
+    --chart-3: 173 100% 33%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 210 17% 98%;
+    --sidebar-foreground: 215 28% 17%;
+    --sidebar-primary: 217 84% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 17% 93%;
+    --sidebar-accent-foreground: 215 28% 17%;
+    --sidebar-border: 215 20% 85%;
+    --sidebar-ring: 217 84% 55%;
+  }
+  .dark {
+    --background: 224 71% 4%; /* #020617 - A very dark blue */
+    --foreground: 215 20% 65%; /* #94A3B8 */
+    --card: 222 47% 11%; /* #0F172A - Dark Blue-Gray */
+    --card-foreground: 210 40% 98%; /* #E2E8F0 */
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%; /* #3B82F6 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 93% 68%; /* #60A5FA */
+    --secondary-foreground: 222 29% 18%;
+    --muted: 222 47% 11%;
+    --muted-foreground: 215 16% 57%;
+    --accent: 210 93% 68%;
+    --accent-foreground: 222 29% 18%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 210 93% 68%;
+    --chart-3: 173 100% 33%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 84% 65%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 222 47% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 47% 20%;
+    --sidebar-ring: 217 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .text-rotate {
+    @apply relative inline-flex flex-nowrap whitespace-nowrap;
+  }
+  .text-rotate-sr-only {
+    @apply sr-only;
+  }
+  .text-rotate-lines {
+    @apply flex w-full flex-col;
+  }
+  .text-rotate-word {
+    @apply inline-flex;
+  }
+  .text-rotate-element {
+    @apply inline-block;
+  }
+  .text-rotate-space {
+    @apply whitespace-pre;
+  }
+  .star-border-container {
+    @apply inline-block relative rounded-[20px] overflow-hidden;
+  }
+
+  .border-gradient-bottom {
+    @apply absolute w-[300%] h-1/2 opacity-70 bottom-[-12px] right-[-250%] rounded-[50%] z-0;
+    background: radial-gradient(circle, hsl(var(--primary)) 0%, rgba(255,255,255,0) 70%);
+    animation: star-movement-bottom 8s linear infinite alternate;
+  }
+
+  .border-gradient-top {
+    @apply absolute w-[300%] h-1/2 opacity-70 top-[-12px] left-[-250%] rounded-[50%] z-0;
+    background: radial-gradient(circle, hsl(var(--primary)) 0%, rgba(255,255,255,0) 70%);
+    animation: star-movement-top 8s linear infinite alternate;
+  }
+
+  .star-border-container > .live-button {
+    @apply relative z-10;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  .btn-shine {
+    background: linear-gradient(110deg, hsl(var(--primary-foreground)) 45%, hsl(var(--primary-foreground) / 0.5) 50%, hsl(var(--primary-foreground)) 55%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 4s linear infinite;
+  }
+}
+
+@layer utilities {
+    .bg-primary-gradient {
+      background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
+    }
+
+    .dark .bg-primary-gradient {
+      background: linear-gradient(90deg, #2563EB 0%, #3B82F6 100%);
+    }
+
+    @keyframes star-movement-bottom {
+      0% {
+        transform: translate(0%, 0%);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-100%, 0%);
+        opacity: 0;
+      }
+    }
+
+    @keyframes star-movement-top {
+      0% {
+        transform: translate(0%, 0%);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(100%, 0%);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes shine {
+        to {
+            background-position-x: -200%;
+        }
+    }
+    
+    .metallic-text {
+        background-image: linear-gradient(
+            to bottom,
+            #d3d3d3 0%,
+            #f5f5f5 30%,
+            #d3d3d3 50%,
+            #f5f5f5 70%,
+            #a9a9a9 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+}
