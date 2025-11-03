@@ -36,11 +36,11 @@ const generateItineraryFromImagePrompt = ai.definePrompt({
 
 A user has uploaded a photo. Your task is to generate a personalized, realistic, and well-structured travel itinerary inspired by the contents and mood of this image.
 
-**Your output must be a single, valid JSON object that strictly conforms to the provided output schema. The entire output, including all titles, summaries, and descriptions, MUST be in English.**
+**Your output must be a single, valid JSON object that strictly conforms to the provided output schema. The entire output, including all titles, summaries, and descriptions, MUST be in the primary language specified in the 'Preferred Languages' section below.**
 
 ### Image Context:
-The user has provided this image as inspiration:
-{{media url=photoDataUri}}
+- The user has provided this image as inspiration: {{media url=photoDataUri}}
+- Preferred Languages: {{languages}}
 
 ### Requirements:
 1.  **Analyze the Image**: Determine the key elements, environment, and mood (e.g., "sunny beach," "historic temple," "mountainous landscape," "vibrant city nightlife").

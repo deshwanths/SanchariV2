@@ -1,4 +1,3 @@
-
 import { z } from 'genkit';
 
 export const ItineraryLocationSchema = z.object({
@@ -52,5 +51,5 @@ export const GenerateItineraryFromImageInputSchema = z.object({
     .describe(
       "A photo for trip inspiration, as a data URI that must include a MIME type and use Base64 encoding. Expected format: 'data:<mimetype>;base64,<encoded_data>'."
     ),
+  languages: z.string().describe('A comma-separated list of preferred languages for the trip, e.g., hindi, english.'),
 });
-    

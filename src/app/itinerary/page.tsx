@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
@@ -19,94 +18,88 @@ function ItineraryPageContent() {
   const [itinerary, setItinerary] = useState<Itinerary | null>(null);
   const [locations, setLocations] = useState<ItineraryLocation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isNew, setIsNew] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
-    const generateNewItinerary = () => {
-      const itineraryQueryData = sessionStorage.getItem('itineraryQuery');
-      if (itineraryQueryData) {
-        const fetchItinerary = async (query: any) => {
-          setIsLoading(true);
-          try {
-            let result;
-            const fromDate = parse(query.startDate, "yyyy-MM-dd", new Date());
-            const toDate = parse(query.endDate, "yyyy-MM-dd", new Date());
-            const numberOfDays = differenceInCalendarDays(toDate, fromDate) + 1;
+    const itineraryQueryData = sessionStorage.getItem('itineraryQuery');
+    const storedItineraryData = sessionStorage.getItem('selectedItinerary');
 
-            if (query.photoDataUri) {
-              result = await generateItineraryFromImage({
-                photoDataUri: query.photoDataUri,
-                // Pass other form data to the image flow if needed in the future
-              });
-            } else {
-              result = await generatePersonalizedItinerary({
-                travelDestination: query.destination,
-                startingLocation: query.startingLocation,
-                travelStyle: query.travelStyle,
-                travelDates: `${format(fromDate, "PPP")} to ${format(toDate, "PPP")}`,
-                interests: query.interests.join(','),
-                moods: query.moods.join(','),
-                languages: query.languages.join(','),
-                numberOfDays: numberOfDays,
-              });
-            }
+    if (itineraryQueryData) {
+      // This is a new itinerary generation
+      setIsNew(true);
+      const fetchItinerary = async (query: any) => {
+        setIsLoading(true);
+        try {
+          let result;
+          const fromDate = parse(query.startDate, "yyyy-MM-dd", new Date());
+          const toDate = parse(query.endDate, "yyyy-MM-dd", new Date());
+          const numberOfDays = differenceInCalendarDays(toDate, fromDate) + 1;
 
-            if (result?.dailyPlans) {
-              result.dailyPlans.sort((a, b) => a.day - b.day);
-            }
-            
-            setItinerary(result);
-            setLocations(result.locations);
-          } catch (e) {
-            console.error(e);
-            toast({
-              variant: "destructive",
-              title: "Generation Failed",
-              description: "Could not generate an itinerary. Please try again later.",
+          if (query.photoDataUri) {
+            result = await generateItineraryFromImage({
+              photoDataUri: query.photoDataUri,
+              languages: query.languages.join(','),
             });
-          } finally {
-            setIsLoading(false);
-            sessionStorage.removeItem('itineraryQuery');
+          } else {
+            result = await generatePersonalizedItinerary({
+              travelDestination: query.destination,
+              startingLocation: query.startingLocation,
+              travelStyle: query.travelStyle,
+              travelDates: `${format(fromDate, "PPP")} to ${format(toDate, "PPP")}`,
+              interests: query.interests.join(','),
+              moods: query.moods.join(','),
+              languages: query.languages.join(','),
+              numberOfDays: numberOfDays,
+            });
           }
-        };
-        try {
-          const parsedQuery = JSON.parse(itineraryQueryData);
-          fetchItinerary(parsedQuery);
-        } catch (e) {
-          console.error("Failed to parse itinerary query from sessionStorage", e);
-          setIsLoading(false);
-        }
-      }
-    };
-    
-    const loadSavedItinerary = () => {
-      const storedItineraryData = sessionStorage.getItem('selectedItinerary');
-      if (storedItineraryData) {
-        try {
-          const parsedItinerary = JSON.parse(storedItineraryData);
-          if (parsedItinerary?.dailyPlans) {
-            parsedItinerary.dailyPlans.sort((a, b) => a.day - b.day);
+
+          if (result?.dailyPlans) {
+            result.dailyPlans.sort((a, b) => a.day - b.day);
           }
-          setItinerary(parsedItinerary);
-          setLocations(parsedItinerary.locations);
-          setIsLoading(false);
-          sessionStorage.removeItem('selectedItinerary');
+          
+          setItinerary(result);
+          setLocations(result.locations);
         } catch (e) {
-          console.error("Failed to parse itinerary data from sessionStorage", e);
+          console.error(e);
           toast({
             variant: "destructive",
-            title: "Error Loading Itinerary",
-            description: "Could not load the saved itinerary from session.",
+            title: "Generation Failed",
+            description: "Could not generate an itinerary. Please try again later.",
           });
+        } finally {
           setIsLoading(false);
+          sessionStorage.removeItem('itineraryQuery');
         }
+      };
+      try {
+        const parsedQuery = JSON.parse(itineraryQueryData);
+        fetchItinerary(parsedQuery);
+      } catch (e) {
+        console.error("Failed to parse itinerary query from sessionStorage", e);
+        setIsLoading(false);
       }
-    };
-
-    if (sessionStorage.getItem('itineraryQuery')) {
-      generateNewItinerary();
-    } else if (sessionStorage.getItem('selectedItinerary')) {
-      loadSavedItinerary();
+    } else if (storedItineraryData) {
+      // This is a saved itinerary being viewed
+      setIsNew(false);
+      try {
+        const parsedItinerary = JSON.parse(storedItineraryData);
+        if (parsedItinerary?.dailyPlans) {
+          parsedItinerary.dailyPlans.sort((a, b) => a.day - b.day);
+        }
+        setItinerary(parsedItinerary);
+        setLocations(parsedItinerary.locations);
+        setIsLoading(false);
+        sessionStorage.removeItem('selectedItinerary');
+      } catch (e) {
+        console.error("Failed to parse itinerary data from sessionStorage", e);
+        toast({
+          variant: "destructive",
+          title: "Error Loading Itinerary",
+          description: "Could not load the saved itinerary from session.",
+        });
+        setIsLoading(false);
+      }
     } else {
       setIsLoading(false);
     }
@@ -119,6 +112,7 @@ function ItineraryPageContent() {
     }
     setItinerary(adjustedItinerary);
     setLocations(adjustedItinerary.locations);
+    setIsNew(true); // An adjusted itinerary should be treated as new for saving purposes.
   };
 
   return (
@@ -132,6 +126,7 @@ function ItineraryPageContent() {
             itinerary={itinerary}
             isLoading={isLoading}
             onItineraryAdjusted={handleItineraryAdjusted}
+            isNew={isNew}
           />
         </div>
       </main>
